@@ -1,9 +1,11 @@
 <app-navbar [pageTitle]="'Home'"></app-navbar>
 
 <app-searchbar></app-searchbar>
+<div id="page-container">
+  <section *ngFor="let category of categories">
+    <app-horizontal-videos [title]="category"></app-horizontal-videos>
+  </section>
 
-<section *ngFor="let category of categories">
-  <app-horizontal-videos [title]="category"></app-horizontal-videos>
-</section>
+</div>
 
 <app-bottom-navbar></app-bottom-navbar>
