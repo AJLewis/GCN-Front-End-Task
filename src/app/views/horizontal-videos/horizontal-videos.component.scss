@@ -4,8 +4,8 @@
     margin-bottom: -5px;;
   }
   div.scroll-container {
-    margin: 0 -10px;
     display: grid;
+    grid-gap:12px;
     grid-auto-flow: column;
     overflow-x: scroll;
 
@@ -14,7 +14,7 @@
       background: #EBECF0;
       box-shadow: 7px 6px 13px #bec1ce, -3px -10px 16px #ffffff;
       max-width: 38vw;
-      margin: 20px 10px 15px 10px;
+      margin: 20px 0;
       img {
         border-radius: 15px 15px 0 0;
         max-width:38vw - 1;
