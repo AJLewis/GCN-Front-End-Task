@@ -57,7 +57,7 @@
           </li>
         </ul>
       </div>
-      <div class="accordion-trigger accordion-shadow" (click)="togglePresenters()">
+      <div class="accordion-trigger accordion-shadow" (click)="togglePresenters()" [class.accordion-shadow-pressed]="showPresenters">
         <p>Presenters</p>
         <fa-icon class="fa-icon" [icon]="fontAwesome.faChevronDown"></fa-icon>
       </div>
