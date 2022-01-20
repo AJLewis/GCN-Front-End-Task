@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: "RubikBold";
+  src: local("Rubik-Bold"), url(./assets/fonts/Rubik-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "RubikRegular";
+  src: local("Rubik-Regular"), url(./assets/fonts/Rubik-Regular.ttf) format("truetype");
+}
+
+body {
+  background-color: #EBECF0;
+  margin: 20px;
+  max-height:50vh;
+  font-size: 12px;
+  font-family: "RubikRegular", Arial, Helvetica, sans-serif;
+  color:#61677C;
+  .pageTitle {
+    font-size:1.5em;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    font-family: "RubikBold", Arial, Helvetica, sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.accordion-shadow {
+  background: #EBECF0;
+  box-shadow: 7px 6px 6px #bec1ce, -3px -10px 16px #ffffff;
+}
+
+.accordion-shadow-pressed {
+  box-shadow: inset 5px 5px 10px #c8c9cc,
+  inset -5px -5px 10px #ffffff;
+}
+
+.menu-shadow {
+  background: #EBECF0;
+  box-shadow:  3px 3px 30px #636772, -3px -3px 1px #f0f1f5;
+}
+
+.menu-shadow-pressed {
+  border-radius: 10px;
+  background: #EBECF0;
+  box-shadow: inset 5px 5px 10px #c8c9cc,
+  inset -5px -5px 10px #ffffff;
+}

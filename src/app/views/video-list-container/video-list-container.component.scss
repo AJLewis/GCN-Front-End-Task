@@ -1,0 +1,29 @@
+.container {
+  margin:15px 0 5px 0;
+  padding: 0;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 -10px;
+    div.video-container {
+      margin: 0 8px 20px 10px;
+      border-radius: 15px;
+      display: inline-block;
+      background: #EBECF0;
+      box-shadow: 7px 6px 13px #bec1ce, -3px -10px 16px #ffffff;
+      max-width: 43vw;
+
+      img {
+        border-radius: 15px 15px 0 0;
+        max-width:43vw;
+        height:auto;
+      }
+      p {
+        margin: 10px;
+        line-height: 1.3em;
+        text-shadow: 1px 1px 0px #FFFFFF;
+      }
+    }
+  }
+
+}

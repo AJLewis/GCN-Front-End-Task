@@ -1,0 +1,30 @@
+.horizontal-video-container {
+  margin:15px 0 5px 0;
+  .pageTitle {
+    margin-bottom: -5px;;
+  }
+  div.scroll-container {
+    margin: 0 -10px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+
+    div.video-container {
+      border-radius: 15px;
+      background: #EBECF0;
+      box-shadow: 7px 6px 13px #bec1ce, -3px -10px 16px #ffffff;
+      max-width: 38vw;
+      margin: 20px 10px 15px 10px;
+      img {
+        border-radius: 15px 15px 0 0;
+        max-width:38vw - 1;
+        height:auto;
+      }
+      p {
+        margin: 10px;
+        line-height: 1.3em;
+        text-shadow: 1px 1px 0px #FFFFFF;
+      }
+    }
+  }
+}

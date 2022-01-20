@@ -1,0 +1,10 @@
+<div class="horizontal-video-container">
+  <p class="pageTitle">{{ title }}</p>
+  <div class="scroll-container">
+    <div class="video-container" *ngFor="let video of videos">
+      <img src="https://img.youtube.com/vi/{{video._id}}/mqdefault.jpg" />
+      <p>{{video.title}}</p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,51 @@
+<!-- container for the bottom navigation bar-->
+<div id="bottom-navbar-container" [class.bottom-navbar-container-dark]="categoryMenuIsOpen">
+  <div id="bottom-navbar">
+    <div id="bottom-strip" class="menu-shadow">
+      <span class="icon-container" [routerLink]="['/most-popular']" [routerLinkActive]="['active']">
+        <fa-icon class="bottom-navbar-icon" [icon]="fontAwesome.faHeart"></fa-icon>
+      </span>
+      <span class="icon-container" [routerLink]="['/latest-videos']" [routerLinkActive]="['active']">
+        <fa-icon class="bottom-navbar-icon" [icon]="fontAwesome.faCalendarAlt"></fa-icon>
+      </span>
+      <span class="icon-container" [routerLink]="['/home']" [routerLinkActive]="['active']">
+        <fa-icon class="bottom-navbar-icon" [icon]="fontAwesome.faHome"></fa-icon>
+      </span>
+      <span class="icon-container" (click)="displayCategoryMenu()" [class.active]="isCategoryPage && !categoryMenuIsOpen" [class.menu-shadow-pressed]="categoryMenuIsOpen">
+        <fa-icon class="bottom-navbar-icon" [icon]="fontAwesome.faTags"></fa-icon>
+      </span>
+      <span class="icon-container"  (click)="displaySwitchMenu()" [class.menu-shadow-pressed]="switchMenuIsOpen">
+        <fa-icon class="bottom-navbar-icon" [icon]="fontAwesome.faCrosshairs"></fa-icon>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- clickable container to close menu -->
+<div [hidden]="!categoryMenuIsOpen && !switchMenuIsOpen" [class.clickable-background]="categoryMenuIsOpen || switchMenuIsOpen" (click)="hideMenu()"></div>
+
+<!-- Category modal menu -->
+<div class="category-menu-container" [hidden]="!categoryMenuIsOpen">
+  <div class="category-menu">
+    <ul>
+      <li>
+        <a class="menu-item"[routerLink]="['/category', 'Showing All']">Show All</a>
+        <hr />
+      </li>
+      <li *ngFor="let cat of categories">
+        <a class="menu-item" [routerLink]="['/category', cat]">{{cat}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- switch section modal menu-->
+<div class="switch-menu-container" [hidden]="!switchMenuIsOpen">
+  <div class="switch-menu">
+    <ul>
+      <li *ngFor="let cat of switchOptions">
+        <a class="menu-item">{{cat}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

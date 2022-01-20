@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://globalcyclingnetwork.com/api/devtask",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,125 @@
+#bottom-navbar-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left:0;
+  right:0;
+  height:150px;
+  background: rgb(235,236,240);
+  background: linear-gradient(0deg, rgba(235,236,240,1) 0%, rgba(0,212,255,0) 100%);
+  padding: 0 40px;
+
+  #bottom-navbar {
+
+    #bottom-strip {
+      margin: 25% 0 0 0;
+      vertical-align: sub;
+      border-radius: 10px;
+      height:40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+      .icon-container {
+        text-align: center;
+        position: relative;
+
+        .bottom-navbar-icon {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          font-size: 1.5em;
+          left:35%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+
+      .icon-container.active {
+        border-radius: 15px;
+        margin: -7px 2px -5px 2px;
+        background-color: #c30006;
+        .bottom-navbar-icon {
+          color: #FFF;
+        }
+      }
+
+      .menu-shadow-pressed {
+        .bottom-navbar-icon {
+          left:34%;
+          top: 52%;
+        }
+      }
+    }
+  }
+}
+
+.clickable-background {
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:80px;
+  left:0;
+}
+
+.category-menu-container {
+  position: fixed;
+  bottom: 90px;
+  left:40px;
+  right:40px;
+
+  .category-menu {
+    padding: 25px;
+    border-radius:15px;
+    background: #EBECF0;
+    box-shadow: 7px 6px 13px #BABECC;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 5px 0;
+        a.menu-item {
+          font-size: 1.4em;
+          font-family: "RubikRegular", Arial, Helvetica, sans-serif;
+          color:#61677C;
+          width:100%;
+          display:block
+        }
+      }
+    }
+  }
+}
+
+.switch-menu-container {
+  position: fixed;
+  bottom: 90px;
+  left:40px;
+  right:40px;
+
+  .switch-menu {
+    padding: 25px;
+    border-radius:15px;
+    background: #EBECF0;
+    box-shadow: 7px 6px 13px #BABECC;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 5px 0;
+        a.menu-item {
+          font-size: 16px;
+          font-family: "RubikRegular", Arial, Helvetica, sans-serif;
+          color:#61677C;
+          width:100%;
+          display:block
+        }
+      }
+    }
+  }
+}
+
+
+

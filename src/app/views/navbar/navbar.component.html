@@ -1,0 +1,73 @@
+<nav>
+  <div id="logo-container">
+    <img src="./assets/img/titleLogo.png">
+    <p class="pageTitle">{{ pageTitle }}</p>
+  </div>
+  <span id="hamburger">
+    <fa-icon [icon]="fontAwesome.faBars" (click)="showMenu()"></fa-icon>
+  </span>
+</nav>
+
+
+<section [hidden]="!showMenuPanel" id="side-menu-container">
+  <div id="clickable" (click)="showMenu()"></div>
+  <div id="side-menu">
+    <span id="side-menu-hamburger">
+      <fa-icon [icon]="fontAwesome.faTimes" (click)="showMenu()"></fa-icon>
+    </span>
+    <div class="logo-container">
+      <img src="./assets/img/sidebarLogo.png" >
+    </div>
+    <div id="social-icons-container">
+      <p class="social-button">
+        <fa-icon class="fa-icon facebook" [icon]="fontAwesomeBrands.faFacebookF"></fa-icon>
+      </p>
+      <p class="social-button">
+        <fa-icon class="fa-icon instagram" [icon]="fontAwesomeBrands.faInstagram"></fa-icon>
+      </p>
+      <p class="social-button">
+        <fa-icon class="fa-icon twitter" [icon]="fontAwesomeBrands.faTwitter"></fa-icon>
+      </p>
+      <p class="social-button">
+        <fa-icon class="fa-icon gplus" [icon]="fontAwesomeBrands.faGooglePlusG"></fa-icon>
+      </p>
+    </div>
+    <button class="button">
+      GCN+
+    </button>
+    <button class="button">
+      GCN Shop
+    </button>
+    <button class="button">
+      Download GCN App
+    </button>
+    <button class="button">
+      Subscribe to YouTube
+    </button>
+
+    <div id="accordions">
+      <div class="accordion-trigger accordion-shadow" (click)="toggleCategories()" [class.accordion-shadow-pressed]="showCategories">
+        <p>Categories</p>
+        <fa-icon class="fa-icon" [icon]="fontAwesome.faChevronDown"></fa-icon>
+      </div>
+      <div class="accordion-shadow accordion-menu" [hidden]="!showCategories">
+        <ul>
+          <li *ngFor="let cat of categories">
+            <a class="menu-item" [routerLink]="['/category', cat]">{{cat}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="accordion-trigger accordion-shadow" (click)="togglePresenters()">
+        <p>Presenters</p>
+        <fa-icon class="fa-icon" [icon]="fontAwesome.faChevronDown"></fa-icon>
+      </div>
+      <div class="accordion-shadow accordion-menu" [hidden]="!showPresenters">
+        <ul>
+          <li *ngFor="let presenter of presenters">
+            <a class="menu-item" [routerLink]="['/category', presenter]">{{presenter}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
