@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.videoService.getVideos().then((videos) => {
       this.videos = videos;
-      console.log(this.videos)
     });
   }
 }

@@ -20,9 +20,7 @@ export class VideoListContainerComponent implements OnInit {
   async getVideos() {
     // if topics was populated in the data I would use this to retrieve the correct videos, instead I randomly pick 5.
     await this.videoService.getVideos().then((videos:any) => {
-      this.videos = videos
-      console.log(videos)
+      this.videos = videos;
     })
   }
-
 }

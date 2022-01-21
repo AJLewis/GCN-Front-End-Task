@@ -22,7 +22,6 @@ export class HorizontalVideosComponent implements OnInit {
     await this.videoService.getVideos().then((videos:any) => {
       let random = Math.abs(Math.floor(Math.random()*(0-15+1)+0));
       this.videos = videos?.slice(random, random+5);
-      console.log(videos)
     })
   }
 }
