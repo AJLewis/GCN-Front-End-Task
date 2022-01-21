@@ -7,12 +7,13 @@ nav {
       display: inline-block;
       width:30px;
       height:30px;
-      vertical-align: sub;
+      vertical-align: super;
     }
     p {
       font-family: "RubikBold", Arial, Helvetica, sans-serif;
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
+      margin-top: 3px;
     }
   }
 

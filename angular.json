@@ -34,7 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js"
+              "src/assets/js/jquery/jquery.min.js"
             ]
           },
           "configurations": {
