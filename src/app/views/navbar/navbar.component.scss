@@ -62,11 +62,12 @@ nav {
         font-size: 1.5em;
       }
     }
-    div.logo-container {
+    div#sidebar-logo-container {
       margin: -15px 0 20px 0;
       width:100%;
-      text-align: center;
+      display: block;
       img {
+        margin: 0 auto;
         width:85px;
         height:100px;
       }
